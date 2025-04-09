@@ -19,7 +19,7 @@ app.post("/user", (req:Request, res:Response) => {
   const { username, password } = req.body;
   
   if (!username || !password) {
-    res.status(400).json({ error: "Username and password are required" });
+    res.status(400).json({ error: "Username and password are not provided" });
     return
   }
 
